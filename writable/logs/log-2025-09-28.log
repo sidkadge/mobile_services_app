@@ -1,0 +1,8 @@
+ERROR - 2025-09-28 13:31:47 --> HomeModel could not be instantiated.
+ERROR - 2025-09-28 13:32:17 --> HomeModel could not be instantiated.
+ERROR - 2025-09-28 13:34:55 --> HomeModel could not be instantiated.
+ERROR - 2025-09-28 13:35:39 --> HomeModel could not be instantiated.
+ERROR - 2025-09-28 13:38:07 --> HomeModel could not be instantiated.
+ERROR - 2025-09-28 13:38:20 --> HomeModel could not be instantiated.
+ERROR - 2025-09-28 13:39:34 --> Email could not be sent. PHPMailer Error: SMTP Error: Could not authenticate.
+ERROR - 2025-09-28 13:40:24 --> Email could not be sent. PHPMailer Error: SMTP Error: Could not authenticate.
