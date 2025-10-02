@@ -25,61 +25,60 @@ class Home extends BaseController
         return view('Home');
     }
 
-    public function contact_form()
-    {
-        $input = $this->request->getJSON(true);
+   public function contact_form()
+{
+    // Get POST data from regular HTML form
+    $input = $this->request->getPost();
 
-        if (!$input) {
-            $input = $this->request->getPost();
-        }
-        if (!isset($input['name'], $input['email'], $input['phone'], $input['subject'], $input['message'])) {
-            return $this->respond([
-                'status'  => 'error',
-                'message' => 'All fields (name, email, phone, subject, message) are required.'
-            ], 400);
-        }
-        $name    = $input['name'];
-        $email   = $input['email'];
-        $phone   = $input['phone'];
-        $subject = $input['subject'];
-        $message = $input['message'];
-        $receiverSubject = "New Contact Form Submission";
-        $receiverMsg = "<h2>Contact Form Submission Details</h2>
+    // Validate required fields
+    if (!isset($input['name'], $input['email'], $input['phone'], $input['subject'], $input['message'])) {
+        // For HTML form, redirect back with flash message
+        return redirect()->back()->with('error', 'All fields (name, email, phone, subject, message) are required.');
+    }
+
+    $name    = $input['name'];
+    $email   = $input['email'];
+    $phone   = $input['phone'];
+    $subject = $input['subject'];
+    $message = $input['message'];
+
+    // Email content
+    $receiverSubject = "New Enquiry Submission";
+    $receiverMsg = "<h2>Contact Form Submission Details</h2>
         <p><strong>Name:</strong> {$name}</p>
         <p><strong>Email:</strong> {$email}</p>
         <p><strong>Phone:</strong> {$phone}</p>
         <p><strong>Subject:</strong> {$subject}</p> 
         <p><strong>Message:</strong> {$message}</p>";
-        $senderSubject = "Thank you for contacting us";
-        $senderMsg = "<h2>Thank you for contacting us</h2>
-        <p>Dear {$name},</p>
-        <p>Thank you for reaching out to us. We have received your message and will
-        get back to you as soon as possible.</p>
-        <p>Best regards,<br>Siddhesh kadge</p>";
-        $ccEmails = [
-            'siddheshkadge214@gmail.com',
-            'rushikeshmanchekar08@gmail.com'
-        ];
-      $isEmailSent = sendConfirmationEmail(
-    $name,
-    $email,
-    $ccEmails,
-    $receiverSubject,
-    $receiverMsg,
-    $senderSubject,
-    $senderMsg
-);
 
-if ($isEmailSent === true) {
-    return $this->respond([
-        'status'  => 'success',
-        'message' => 'Your message has been sent successfully.'
-    ]);
-} else {
-    return $this->respond([
-        'status'  => 'error',
-        'message' => $isEmailSent 
-    ], 500);
-}
+    $senderSubject = "Thank you for contacting Aarya Mobile Services";
+    $senderMsg = "<p>Dear {$name},</p>
+        <p>Thank you for reaching out to Aarya Mobile Services. We have received your message and will
+        get back to you as soon as possible.</p>
+        <p>Best regards,<br>Aarya Mobile Services</p>";
+
+    $ccEmails = [
+        'siddheshkadge214@gmail.com',
+        'rushikeshmanchekar08@gmail.com'
+    ];
+
+    // Send email
+    $isEmailSent = sendConfirmationEmail(
+        $name,
+        $email,
+        $ccEmails,
+        $receiverSubject,
+        $receiverMsg,
+        $senderSubject,
+        $senderMsg
+    );
+
+    if ($isEmailSent === true) {
+        // Redirect back with success message
+        return redirect()->back()->with('success', 'Your message has been sent successfully.');
+    } else {
+        return redirect()->back()->with('error', $isEmailSent);
     }
+}
+
 }

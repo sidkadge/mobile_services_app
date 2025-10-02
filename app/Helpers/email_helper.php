@@ -27,7 +27,7 @@ function sendConfirmationEmail(
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('siddheshkadgemitech@gmail.com', 'Siddhesh Kadge'); 
+        $mail->setFrom('siddheshkadgemitech@gmail.com', 'Aarya Mobile Services'); 
         $mail->addAddress($email, $name);
         if ($ccEmails) {
             foreach ($ccEmails as $cc) {
