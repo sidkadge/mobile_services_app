@@ -469,25 +469,39 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lg:w-1/2">
-                        <form class="bg-white p-8 rounded-lg shadow-md">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Name">
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="your@email.com">
-                            </div>
-                            <div class="mb-4">
-                                <label for="device" class="block text-gray-700 font-semibold mb-2">Device & Issue</label>
-                                <textarea id="device" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., iPhone 13 Pro - cracked screen"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition-colors">
-                                Submit Request
-                            </button>
-                        </form>
-                    </div>
+                   <div class="lg:w-1/2">
+    <form action="<?= base_url('contact_form') ?>" method="post" class="bg-white p-8 rounded-lg shadow-md">
+        <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Name" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="your@email.com" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone</label>
+            <input type="text" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="9876543210">
+        </div>
+
+        <div class="mb-4">
+            <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
+            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Testing Email" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Hello, this is a test message." required></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition-colors">
+            Submit Request
+        </button>
+    </form>
+</div>
+
                 </div>
             </div>
         </section>
