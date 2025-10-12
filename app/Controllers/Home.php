@@ -59,7 +59,8 @@ class Home extends BaseController
 
     $ccEmails = [
         'siddheshkadge214@gmail.com',
-        'rushikeshmanchekar08@gmail.com'
+        'rushikeshmanchekar08@gmail.com',
+        'Kondesahil2@gmail.com'
     ];
 
     // Send email

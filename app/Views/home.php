@@ -105,115 +105,193 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-bg text-white py-20 md:py-32 rounded-b-3xl overflow-hidden shadow-lg">
-        <div class="container mx-auto px-4 text-center">
+    <section class="relative h-screen flex items-center justify-center text-center text-white">
+        <!-- Parallax Background -->
+        <div 
+            class="absolute inset-0 bg-fixed bg-center bg-cover" 
+            style="background-image: url('public/uploads/images/mobile_servicing_img.jpg');">
+        </div>
+
+        <!-- Overlay (optional, to darken the background) -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 px-4">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">
                 Expert Mobile Repair Services
             </h1>
             <p class="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in">
                 Fast, reliable, and affordable repairs for all your devices.
             </p>
-            <a href="#device-selection-section" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
+            <a href="#device-selection-section" 
+            class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-105">
                 Get a Free Quote
             </a>
         </div>
     </section>
 
+
     <main id="main-content">
         <!-- Device Selection Section (Default View) -->
-        <section id="device-selection-section" class="py-16 md:py-24 bg-white rounded-3xl -mt-16 z-10 relative shadow-inner">
-            <div class="max-w-7xl mx-auto text-center px-4">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12">Select Your Device</h2>
-                <div id="device-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                    <!-- Device 1: iPhone -->
-                    <div data-device="Apple iPhone" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=iPhone" alt="iPhone" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">iPhone</p>
-                    </div>
-                    <!-- Device 2: iPad -->
-                    <div data-device="iPad" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=iPad" alt="iPad" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">iPad</p>
-                    </div>
-                    <!-- Device 3: Apple Watch -->
-                    <div data-device="Apple Watch" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Watch" alt="Apple Watch" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Apple Watch</p>
-                    </div>
-                    <!-- Device 4: OnePlus -->
-                    <div data-device="OnePlus" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=OnePlus" alt="OnePlus" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">OnePlus</p>
-                    </div>
-                    <!-- Device 5: Google Pixel -->
-                    <div data-device="Google Pixel" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Pixel" alt="Google Pixel" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Google Pixel</p>
-                    </div>
-                    <!-- Device 6: Samsung -->
-                    <div data-device="Samsung" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Samsung" alt="Samsung" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Samsung</p>
-                    </div>
-                    <!-- Device 7: Oppo -->
-                    <div data-device="Oppo" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Oppo" alt="Oppo" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Oppo</p>
-                    </div>
-                    <!-- Device 8: Vivo -->
-                    <div data-device="Vivo" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Vivo" alt="Vivo" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Vivo</p>
-                    </div>
-                    <!-- Device 9: Realme -->
-                    <div data-device="Realme" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Realme" alt="Realme" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Realme</p>
-                    </div>
-                    <!-- Device 10: Mi (Redmi) -->
-                    <div data-device="Mi (Redmi)" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Mi+Redmi" alt="Mi (Redmi)" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Mi (Redmi)</p>
-                    </div>
-                    <!-- Device 11: iQOO -->
-                    <div data-device="iQOO" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=iQOO" alt="iQOO" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">iQOO</p>
-                    </div>
-                    <!-- Device 12: Asus ROG -->
-                    <div data-device="Asus ROG" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Asus+ROG" alt="Asus ROG" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Asus ROG</p>
-                    </div>
-                    <!-- Device 13: Nokia -->
-                    <div data-device="Nokia" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Nokia" alt="Nokia" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Nokia</p>
-                    </div>
-                    <!-- Device 14: Motorola -->
-                    <div data-device="Motorola" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Motorola" alt="Motorola" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Motorola</p>
-                    </div>
-                    <!-- Device 15: Honor -->
-                    <div data-device="Honor" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Honor" alt="Honor" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Honor</p>
-                    </div>
-                    <!-- Device 16: Lenovo -->
-                    <div data-device="Lenovo" class="device-card bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer">
-                        <img src="https://placehold.co/150x150/E5E7EB/4B5563?text=Lenovo" alt="Lenovo" class="w-full h-auto rounded-xl mb-4">
-                        <p class="text-lg font-medium text-gray-800">Lenovo</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="device-selection-section" class="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-extrabold text-center mb-12 drop-shadow-lg animate-fade-in">
+      Choose Your Device
+    </h2>
+
+    <!-- Accordion Container -->
+    <div class="space-y-6">
+
+      <!-- Mobiles Accordion -->
+      <div class="accordion bg-white rounded-2xl shadow-xl overflow-hidden">
+        <button class="accordion-header w-full flex justify-between items-center p-6 text-lg font-bold text-indigo-700 hover:bg-indigo-100 transition">
+          <span><i class="fas fa-mobile-alt mr-3"></i> Mobiles</span>
+          <svg class="accordion-icon w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+<div class="accordion-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 p-6 hidden opacity-0 transition-all duration-200 ease-out">
+  <!-- Apple -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Apple iPhone">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-16 h-16 mx-auto mb-4" alt="Apple">
+    <h3 class="text-lg font-bold text-gray-800">Apple</h3>
+  </div>
+  <!-- Samsung -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Samsung">
+    <img src="public\uploads\images\samsung_logo.png" class="w-20 h-10 mx-auto mb-4" alt="Samsung">
+    <h3 class="text-lg font-bold text-gray-800">Samsung</h3>
+  </div>
+  <!-- OnePlus -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="OnePlus">
+    <img src="public\uploads\images\oneplusr_logo.jpg" class="w-20 h-10 mx-auto mb-4" alt="OnePlus">
+    <h3 class="text-lg font-bold text-gray-800">OnePlus</h3>
+  </div>
+  <!-- Xiaomi -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Xiaomi">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo.svg" class="w-16 h-16 mx-auto mb-4" alt="Xiaomi">
+    <h3 class="text-lg font-bold text-gray-800">Xiaomi</h3>
+  </div>
+  <!-- Oppo -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Oppo">
+    <img src="public\uploads\images\oppo_logo.jpg" class="w-24 h-10 mx-auto mb-4" alt="Oppo">
+    <h3 class="text-lg font-bold text-gray-800">Oppo</h3>
+  </div>
+  <!-- Vivo -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Vivo">
+    <img src="public\uploads\images\vivo_logo.jpg" class="w-20 h-10 mx-auto mb-4" alt="Vivo">
+    <h3 class="text-lg font-bold text-gray-800">Vivo</h3>
+  </div>
+  <!-- Realme -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Realme">
+    <img src="public\uploads\images\realme_logo.jpg" class="w-24 h-10 mx-auto mb-4" alt="Realme">
+    <h3 class="text-lg font-bold text-gray-800">Realme</h3>
+  </div>
+  <!-- Google Pixel -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Google Pixel">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="w-20 h-10 mx-auto mb-4" alt="Google">
+    <h3 class="text-lg font-bold text-gray-800">Google Pixel</h3>
+  </div>
+</div>
+
+      </div>
+
+      <!-- iPads Accordion -->
+      <div class="accordion bg-white rounded-2xl shadow-xl overflow-hidden">
+        <button class="accordion-header w-full flex justify-between items-center p-6 text-lg font-bold text-purple-700 hover:bg-purple-100 transition">
+          <span><i class="fas fa-tablet-alt mr-3"></i> iPads</span>
+          <svg class="accordion-icon w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="accordion-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 p-6 hidden opacity-0 transition-all duration-200 ease-out">
+  <!-- iPad Pro -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="iPad Pro">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-16 h-16 mx-auto mb-4" alt="iPad Pro">
+    <h3 class="text-lg font-bold text-gray-800">iPad Pro</h3>
+  </div>
+  <!-- iPad Air -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="iPad Air">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-16 h-16 mx-auto mb-4" alt="iPad Air">
+    <h3 class="text-lg font-bold text-gray-800">iPad Air</h3>
+  </div>
+  <!-- iPad Mini -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="iPad Mini">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-16 h-16 mx-auto mb-4" alt="iPad Mini">
+    <h3 class="text-lg font-bold text-gray-800">iPad Mini</h3>
+  </div>
+  <!-- iPad 9th Gen -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="iPad 9th Gen">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-16 h-16 mx-auto mb-4" alt="iPad 9th Gen">
+    <h3 class="text-lg font-bold text-gray-800">iPad 9th Gen</h3>
+  </div>
+</div>
+
+      </div>
+
+      <!-- Smartwatches Accordion -->
+      <div class="accordion bg-white rounded-2xl shadow-xl overflow-hidden">
+        <button class="accordion-header w-full flex justify-between items-center p-6 text-lg font-bold text-pink-700 hover:bg-pink-100 transition">
+          <span><i class="fas fa-watch mr-3"></i> Smartwatches</span>
+          <svg class="accordion-icon w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
+        <div class="accordion-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 p-6 hidden opacity-0 transition-all duration-200 ease-out">
+  <!-- Apple Watch -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Apple Watch">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-16 h-16 mx-auto mb-4" alt="Apple Watch">
+    <h3 class="text-lg font-bold text-gray-800">Apple Watch</h3>
+  </div>
+  <!-- Samsung Watch -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Samsung Galaxy Watch">
+    <img src="public\uploads\images\galaxy_watchlogo.jpg" class="w-20 h-10 mx-auto mb-4" alt="Samsung Watch">
+    <h3 class="text-lg font-bold text-gray-800">Samsung Galaxy Watch</h3>
+  </div>
+  <!-- Fitbit -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Fitbit">
+    <img src="public\uploads\images\fitbit_logo.jpg" class="w-24 h-10 mx-auto mb-4" alt="Fitbit">
+    <h3 class="text-lg font-bold text-gray-800">Fitbit</h3>
+  </div>
+  <!-- Garmin -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Garmin">
+    <img src="public\uploads\images\amazfit_logo.jpg" class="w-24 h-10 mx-auto mb-4" alt="Garmin">
+    <h3 class="text-lg font-bold text-gray-800">Amazfit</h3>
+  </div>
+  <!-- Huawei Watch -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Huawei Watch">
+    <img src="public\uploads\images\Huawei_logo.jpg" class="w-20 h-10 mx-auto mb-4" alt="Huawei Watch">
+    <h3 class="text-lg font-bold text-gray-800">Huawei Watch</h3>
+  </div>
+  <!-- Noise -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Noise">
+    <img src="public\uploads\images\noise_logo.jpg" class="w-20 h-10 mx-auto mb-4" alt="Noise">
+    <h3 class="text-lg font-bold text-gray-800">Noise</h3>
+  </div>
+  <!-- Boat -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Boat">
+    <img src="public\uploads\images\boat_logo.png" class="w-24 h-10 mx-auto mb-4" alt="Boat">
+    <h3 class="text-lg font-bold text-gray-800">Boat</h3>
+  </div>
+    <!-- Other -->
+  <div class="device-card bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all cursor-pointer p-6 text-center" data-device="Boat">
+    <img src="public\uploads\images\other_smartwatch.jpg" class="w-24 h-10 mx-auto mb-4" alt="Boat">
+    <h3 class="text-lg font-bold text-gray-800">Other</h3>
+  </div>
+</div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
         <!-- Model Selection Section (Hidden by default) -->
         <section id="model-selection-section" class="py-16 md:py-24 bg-white hidden">
             <div class="max-w-7xl mx-auto text-center px-4">
                 <h2 id="model-selection-heading" class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12"></h2>
-                <div id="model-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div id="model-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-center text-center">
                     <!-- Models will be populated here by JavaScript -->
                 </div>
                 <div class="mt-8">
@@ -557,24 +635,100 @@
             let selectedService = '';
 
             // Data for device models
-            const deviceData = {
-                'Apple iPhone': ['iPhone 15 Pro Max', 'iPhone 15 Pro', 'iPhone 15', 'iPhone 14 Pro Max', 'iPhone 14 Pro', 'iPhone 14', 'iPhone 13 Pro Max', 'iPhone 13 Pro', 'iPhone 13', 'iPhone SE'],
-                'iPad': ['iPad Pro (M4)', 'iPad Air (M2)', 'iPad (10th gen)', 'iPad mini (6th gen)'],
-                'Apple Watch': ['Apple Watch Ultra 2', 'Apple Watch Series 9', 'Apple Watch SE'],
-                'OnePlus': ['OnePlus 12', 'OnePlus 11', 'OnePlus Nord 3', 'OnePlus Nord CE 3'],
-                'Google Pixel': ['Pixel 8 Pro', 'Pixel 8', 'Pixel 7a', 'Pixel Fold'],
-                'Samsung': ['Galaxy S24 Ultra', 'Galaxy S24+', 'Galaxy S24', 'Galaxy Z Fold5', 'Galaxy Z Flip5', 'Galaxy Tab S9'],
-                'Oppo': ['Oppo Reno 10 Pro+', 'Oppo Find N3 Flip'],
-                'Vivo': ['Vivo X100 Pro', 'Vivo V29 Pro', 'Vivo Y200e'],
-                'Realme': ['Realme 12 Pro+', 'Realme GT 5 Pro'],
-                'Mi (Redmi)': ['Xiaomi 14 Ultra', 'Redmi Note 13 Pro+'],
-                'iQOO': ['iQOO 12', 'iQOO Z7 Pro'],
-                'Asus ROG': ['ROG Phone 8 Pro', 'ROG Phone 8'],
-                'Nokia': ['Nokia G42 5G', 'Nokia C22'],
-                'Motorola': ['Moto Edge 40', 'Moto Razr 40 Ultra'],
-                'Honor': ['Honor 90', 'Honor X9b'],
-                'Lenovo': ['Lenovo Tab P12 Pro', 'Lenovo Tab M10']
-            };
+const deviceData = {
+    'Apple iPhone': [
+        'iPhone 15 Pro Max', 'iPhone 15 Pro', 'iPhone 15', 
+        'iPhone 14 Pro Max', 'iPhone 14 Pro', 'iPhone 14', 
+        'iPhone 13 Pro Max', 'iPhone 13 Pro', 'iPhone 13', 
+        'iPhone 12 Pro Max', 'iPhone 12', 'iPhone 11', 
+        'iPhone SE (2022)', 'iPhone XR', 'other'
+    ],
+    'iPad': [
+        'iPad Pro (M4)', 'iPad Pro (M2)', 'iPad Air (M2)', 
+        'iPad Air (5th Gen)', 'iPad (10th Gen)', 
+        'iPad (9th Gen)', 'iPad mini (6th Gen)', 'iPad mini (5th Gen)', 'other'
+    ],
+    'Apple Watch': [
+        'Apple Watch Ultra 2', 'Apple Watch Ultra', 
+        'Apple Watch Series 9', 'Apple Watch Series 8', 
+        'Apple Watch SE (2nd Gen)', 'Apple Watch SE', 'other'
+    ],
+    'Samsung': [
+        'Galaxy S24 Ultra', 'Galaxy S24+', 'Galaxy S24', 
+        'Galaxy S23 Ultra', 'Galaxy S23', 'Galaxy Z Fold5', 
+        'Galaxy Z Flip5', 'Galaxy Z Fold4', 'Galaxy Z Flip4',
+        'Galaxy A55', 'Galaxy A35', 'Galaxy Tab S9 Ultra', 
+        'Galaxy Tab S9+', 'Galaxy Tab S9', 'Galaxy Tab A9+', 'other'
+    ],
+    'OnePlus': [
+        'OnePlus 12', 'OnePlus 12R', 'OnePlus 11', 
+        'OnePlus 10 Pro', 'OnePlus 10T', 
+        'OnePlus Nord 3', 'OnePlus Nord CE 3', 
+        'OnePlus Nord CE 3 Lite', 'other'
+    ],
+    'Google Pixel': [
+        'Pixel 8 Pro', 'Pixel 8', 'Pixel 7a', 
+        'Pixel 7 Pro', 'Pixel 7', 'Pixel 6a', 
+        'Pixel Fold', 'Pixel Tablet', 'other'
+    ],
+    'Oppo': [
+        'Oppo Reno 11 Pro', 'Oppo Reno 10 Pro+', 
+        'Oppo Find X7 Ultra', 'Oppo Find X6 Pro', 
+        'Oppo Find N3 Flip', 'Oppo Find N2 Flip', 'other'
+    ],
+    'Vivo': [
+        'Vivo X100 Pro', 'Vivo X100', 
+        'Vivo V30 Pro', 'Vivo V29 Pro', 'Vivo V29', 
+        'Vivo Y200e', 'Vivo Y100', 'Vivo T3x', 'other'
+    ],
+    'Realme': [
+        'Realme 12 Pro+', 'Realme 12 Pro', 
+        'Realme GT 5 Pro', 'Realme GT 3', 
+        'Realme 11 Pro+', 'Realme 11x', 
+        'Realme Narzo 70 Pro', 'Realme C67', 'other'
+    ],
+    'Mi (Redmi)': [
+        'Xiaomi 14 Ultra', 'Xiaomi 14', 
+        'Redmi Note 13 Pro+', 'Redmi Note 13 Pro', 
+        'Redmi Note 13 5G', 'Redmi Note 12 Pro+', 
+        'Redmi 13C', 'POCO F6 Pro', 'POCO X6 Pro', 'other'
+    ],
+    'iQOO': [
+        'iQOO 12', 'iQOO 12 Pro', 'iQOO Neo 9 Pro', 
+        'iQOO Z9', 'iQOO Z7 Pro', 'iQOO 11', 'other'
+    ],
+    'Asus ROG': [
+        'ROG Phone 8 Pro', 'ROG Phone 8', 
+        'ROG Phone 7 Ultimate', 'ROG Phone 7', 'other'
+    ],
+    'Nokia': [
+        'Nokia G42 5G', 'Nokia X30 5G', 
+        'Nokia G60 5G', 'Nokia C32', 'Nokia C22', 'other'
+    ],
+    'Motorola': [
+        'Moto Edge 50 Ultra', 'Moto Edge 50 Pro', 
+        'Moto Edge 40', 'Moto Edge 40 Neo', 
+        'Moto Razr 40 Ultra', 'Moto Razr 40', 
+        'Moto G73', 'Moto G54', 'other'
+    ],
+    'Honor': [
+        'Honor 200 Pro', 'Honor 90', 'Honor 100', 
+        'Honor X9b', 'Honor Magic V2', 'Honor Magic 6 Pro', 'other'
+    ],
+    'Lenovo': [
+        'Lenovo Tab P12 Pro', 'Lenovo Tab P11 (2nd Gen)', 
+        'Lenovo Tab M10', 'Lenovo Tab M11', 
+        'Lenovo Legion Y700 (2023)', 'other'
+    ],
+    'Nothing': [
+        'Nothing Phone (2a)', 'Nothing Phone (2)', 'Nothing Phone (1)', 'other'
+    ],
+    'Sony': [
+        'Sony Xperia 1 VI', 'Sony Xperia 5 V', 
+        'Sony Xperia 10 VI', 'Sony Xperia PRO-I', 'other'
+    ]
+};
+
 
             // Mobile menu toggle
             mobileMenuButton.addEventListener('click', () => {
@@ -597,35 +751,34 @@
 
             // Populate models grid
             function populateModels(deviceName) {
-                modelGrid.innerHTML = '';
-                const models = deviceData[deviceName] || [];
-                if (models.length > 0) {
-                    models.forEach(model => {
-                        const modelCard = document.createElement('div');
-                        modelCard.className = 'bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer';
-                        
-                        // Create a placeholder image for each model
-                        const imageUrl = `https://placehold.co/150x150/E5E7EB/4B5563?text=${encodeURIComponent(model)}`;
-                        
-                        modelCard.innerHTML = `
-                            <img src="${imageUrl}" alt="${model}" class="w-full h-auto rounded-xl mb-4">
-                            <p class="text-lg font-medium text-gray-800 text-center">${model}</p>
-                        `;
+    modelGrid.innerHTML = '';
+    const models = deviceData[deviceName] || [];
+    if (models.length > 0) {
+        models.forEach(model => {
+            const modelCard = document.createElement('button');
+            modelCard.className = `
+                w-full sm:w-auto text-lg font-semibold text-indigo-700 
+                border-2 border-indigo-500 bg-white rounded-xl 
+                px-6 py-4 m-2 shadow-md transition-all duration-300 
+                hover:bg-indigo-600 hover:text-white hover:shadow-lg 
+                focus:outline-none focus:ring-4 focus:ring-indigo-300
+            `;
+            modelCard.textContent = model;
 
-                        // Add click listener to show the services section
-                        modelCard.addEventListener('click', () => {
-                            selectedModel = model;
-                            modelSelectionSection.classList.add('hidden');
-                            servicesSection.classList.remove('hidden');
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        });
+            modelCard.addEventListener('click', () => {
+                selectedModel = model;
+                modelSelectionSection.classList.add('hidden');
+                servicesSection.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
 
-                        modelGrid.appendChild(modelCard);
-                    });
-                } else {
-                    modelGrid.innerHTML = '<p class="text-center text-gray-600">No models found for this device.</p>';
-                }
-            }
+            modelGrid.appendChild(modelCard);
+        });
+    } else {
+        modelGrid.innerHTML = '<p class="text-center text-gray-600">No models found for this device.</p>';
+    }
+}
+
 
             // Handle service card clicks
             document.querySelectorAll('.service-card').forEach(card => {
@@ -707,5 +860,30 @@
             });
         });
     </script>
+
+<script>
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.accordion-icon');
+
+      if (content.classList.contains('hidden')) {
+        document.querySelectorAll('.accordion-content').forEach(c => {
+          c.classList.add('hidden', 'opacity-0');
+          c.previousElementSibling.querySelector('.accordion-icon').classList.remove('rotate-180');
+        });
+        content.classList.remove('hidden');
+        setTimeout(() => content.classList.remove('opacity-0'), 10);
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('opacity-0');
+        setTimeout(() => content.classList.add('hidden'), 300);
+        icon.classList.remove('rotate-180');
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>
