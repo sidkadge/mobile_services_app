@@ -25,6 +25,10 @@ class Home extends BaseController
         return view('Home');
     }
 
+    public function enquiry()
+    {
+        return view('enquiry');
+    }
    public function contact_form()
 {
     // Get POST data from regular HTML form
