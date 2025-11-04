@@ -25,6 +25,10 @@ class Home extends BaseController
         return view('Home');
     }
 
+    public function enquiry()
+    {
+        return view('enquiry');
+    }
    public function contact_form()
 {
     // Get POST data from regular HTML form
@@ -59,7 +63,8 @@ class Home extends BaseController
 
     $ccEmails = [
         'siddheshkadge214@gmail.com',
-        'rushikeshmanchekar08@gmail.com'
+        'rushikeshmanchekar08@gmail.com',
+        'Kondesahil2@gmail.com'
     ];
 
     // Send email
