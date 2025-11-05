@@ -469,6 +469,38 @@
                         <input type="hidden" id="device-name-input" name="device-name">
                         <input type="hidden" id="model-name-input" name="model-name">
                         <input type="hidden" id="service-name-input" name="service-name">
+                        <div class="mb-4">
+                            <label for="mobile-company" class="block text-gray-700 text-sm font-bold mb-2">Mobile Company</label>
+                            <input
+                                type="text"
+                                id="mobile-company"
+                                name="mobile_company"
+                                class="w-full px-4 py-2 border rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                readonly
+                                placeholder="Mobile company will appear here automatically">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="mobile-model" class="block text-gray-700 text-sm font-bold mb-2">Mobile Model</label>
+                            <input
+                                type="text"
+                                id="mobile-model"
+                                name="mobile_model"
+                                class="w-full px-4 py-2 border rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                readonly
+                                placeholder="Selected model will appear here automatically">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="service-name" class="block text-gray-700 text-sm font-bold mb-2">Service</label>
+                            <input
+                                type="text"
+                                id="service-name"
+                                name="services"
+                                class="w-full px-4 py-2 border rounded-lg shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                readonly
+                                placeholder="Selected service will appear here automatically">
+                        </div>
                         <div>
                             <label for="full-name" class="block text-gray-700 font-semibold mb-2">Full Name <span class="text-red-500">*</span></label>
                             <input type="text" id="full-name" name="full-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Name">
@@ -502,7 +534,7 @@
         <!-- About Section -->
         <section id="about" class="aboutussec py-16 md:py-24">
             <div class="responsive-container-block bigContainer">
-                  <p class="text-blk headingText" data-aos="fade-up">About Us</p>
+                <p class="text-blk headingText" data-aos="fade-up">About Us</p>
                 <div class="responsive-container-block Container bottomContainer">
                     <div class="ultimateImg" data-aos="zoom-in">
                         <img class="mainImg" src="public/uploads/images/aboutusrepairingmob.jpg">
@@ -530,10 +562,12 @@
             </div>
         </section>
         <style>
-            .aboutussec{background: linear-gradient(135deg, #ffffff 0%, #e0f7fa 50%, #b2ebf2 100%);
+            .aboutussec {
+                background: linear-gradient(135deg, #ffffff 0%, #e0f7fa 50%, #b2ebf2 100%);
 
-color: #fff;
-}
+                color: #fff;
+            }
+
             .responsive-container-block {
                 min-height: 75px;
                 height: fit-content;
@@ -1371,77 +1405,89 @@ color: #fff;
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900" data-aos="fade-up">Contact Us</h2>
                 <div class="contactusbox" data-aos="zoom-in">
-                <div class="flex flex-col lg:flex-row gap-12">
-                    <div class="lg:w-1/2">
-                        <p class="text-lg text-gray-700 mb-6">
-                            Ready to get your device repaired? Fill out the form below or contact us directly. We'll get back to you as soon as possible with a free quote.
-                        </p>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-4">
-                                <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span class="text-gray-700">Shivtirth Nagar, Kothrud - 411 011</span>
+                    <div class="flex flex-col lg:flex-row gap-12">
+                        <div class="lg:w-1/2">
+                            <p class="text-lg text-gray-700 mb-6">
+                                Ready to get your device repaired? Fill out the form below or contact us directly. We'll get back to you as soon as possible with a free quote.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-4">
+                                    <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Shivtirth Nagar, Kothrud - 411 011</span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.956.71l1.19 3.96a1 1 0 00.51.51l3.96 1.19a1 1 0 00.71.956H17a1 1 0 011 1v2.153a1 1 0 01-.71.956l-3.96 1.19a1 1 0 00-.51.51l-1.19 3.96a1 1 0 01-.956.71H3a1 1 0 01-1-1v-2.153a1 1 0 01.71-.956l3.96-1.19a1 1 0 00.51-.51l1.19-3.96a1 1 0 00.956-.71H17a1 1 0 011 1v2.153a1 1 0 01-.71.956L14.72 13.91a1 1 0 00-.51.51l-1.19 3.96a1 1 0 01-.956.71H3a1 1 0 01-1-1V5.153a1 1 0 01.71-.956z"></path>
+                                    </svg>
+                                    <a href="tel:5551234567" class="text-gray-700 hover:text-indigo-600 transition-colors">(555) 123-4567</a>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.003 5.884L10 11.239l7.997-5.355A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                        <path d="M18 8.118l-8 4.717-8-4.717V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                    </svg>
+                                    <a href="mailto:contact@aryarepair.com" class="text-gray-700 hover:text-indigo-600 transition-colors">contact@aryarepair.com</a>
+                                </div>
+
                             </div>
-                            <div class="flex items-center space-x-4">
-                                <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.956.71l1.19 3.96a1 1 0 00.51.51l3.96 1.19a1 1 0 00.71.956H17a1 1 0 011 1v2.153a1 1 0 01-.71.956l-3.96 1.19a1 1 0 00-.51.51l-1.19 3.96a1 1 0 01-.956.71H3a1 1 0 01-1-1v-2.153a1 1 0 01.71-.956l3.96-1.19a1 1 0 00.51-.51l1.19-3.96a1 1 0 00.956-.71H17a1 1 0 011 1v2.153a1 1 0 01-.71.956L14.72 13.91a1 1 0 00-.51.51l-1.19 3.96a1 1 0 01-.956.71H3a1 1 0 01-1-1V5.153a1 1 0 01.71-.956z"></path>
-                                </svg>
-                                <a href="tel:5551234567" class="text-gray-700 hover:text-indigo-600 transition-colors">(555) 123-4567</a>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.003 5.884L10 11.239l7.997-5.355A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                                    <path d="M18 8.118l-8 4.717-8-4.717V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                                </svg>
-                                <a href="mailto:contact@aryarepair.com" class="text-gray-700 hover:text-indigo-600 transition-colors">contact@aryarepair.com</a>
-                            </div>
+                        </div>
+                        <div class="lg:w-1/2">
                             <div class="flex items-center space-x-4">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2061489554126!2d73.85284587496292!3d18.519584082573754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1e2226b7b11%3A0xa4bb8106175ca68b!2sShaniwar%20Wada!5e0!3m2!1sen!2sin!4v1761747897293!5m2!1sen!2sin" width="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
+                            <form action="<?= base_url('contact_form') ?>" method="post" class="bg-white p-8 rounded-lg shadow-md" style="background: #f9fafb; display: none;">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Name" required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="exa@gmail.com" required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone</label>
+                                    <input type="text" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Mobile No.">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Subject" required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Please enter your message." required></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition-colors">
+                                    Submit Request
+                                </button>
+                            </form>
                         </div>
+
                     </div>
-                    <div class="lg:w-1/2">
-                        <form action="<?= base_url('contact_form') ?>" method="post" class="bg-white p-8 rounded-lg shadow-md" style="background: #f9fafb;">
-                            <div class="mb-4">
-                                <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Name" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="exa@gmail.com" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone</label>
-                                <input type="text" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Mobile No.">
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
-                                <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Subject" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Please enter your message." required></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition-colors">
-                                Submit Request
-                            </button>
-                        </form>
-                    </div>
-
-                </div>
                 </div>
             </div>
         </section>
 
         <style>
-            .contactusbox{width: 85%; background: white; margin: 0 auto; padding: 20px; box-shadow: 0px 0px 6px gray;}
-            .contactusbox iframe{height: 300px; padding: 5px; box-shadow: 0px 0px 5px #d0d0d0;}
+            .contactusbox {
+                width: 85%;
+                background: white;
+                margin: 0 auto;
+                padding: 20px;
+                box-shadow: 0px 0px 6px gray;
+            }
+
+            .contactusbox iframe {
+                height: 300px;
+                padding: 5px;
+                box-shadow: 0px 0px 5px #d0d0d0;
+            }
         </style>
     </main>
 
@@ -1654,19 +1700,20 @@ color: #fff;
                 });
             });
 
-            // Show the repair form
             function showForm() {
-                deviceNameInput.value = selectedDevice;
-                modelNameInput.value = selectedModel;
-                serviceNameInput.value = selectedService;
+                companyField.value = selectedDevice; // Autofill company
+                modelField.value = selectedModel; // Autofill model
+                serviceField.value = selectedService; // Autofill service
 
                 servicesSection.classList.add('hidden');
                 repairFormSection.classList.remove('hidden');
+
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
                 });
             }
+
 
             // Handle back button clicks
             backButtonModel.addEventListener('click', () => {
@@ -1764,14 +1811,18 @@ color: #fff;
             });
         });
     </script>
-    <!-- Add before </body> -->
+    <script>
+        const companyField = document.getElementById('mobile-company');
+        const modelField = document.getElementById('mobile-model');
+        const serviceField = document.getElementById('service-name');
+    </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-    AOS.init({
-        duration: 1000, // Animation duration in ms
-        once: true,     // Animation happens only once
-        offset: 120,    // Offset from top before triggering animation
-    });
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 120,
+        });
     </script>
 </body>
 

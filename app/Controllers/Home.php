@@ -25,21 +25,26 @@ class Home extends BaseController
         return view('Home');
     }
 
-  public function enquiry()
-{
-    $db = \Config\Database::connect();
-    $builder = $db->table('contact_form_submissions');
-    $query = $builder->orderBy('id', 'DESC')->get();
-    $results = $query->getResultArray();
+    public function enquiry()
+    {
+        if (!session()->has('user_id')) {
+            return redirect()->to('login')->with('error', 'Please login first.');
+        }
 
-    $data = [
-        'status' => true,
-        'count'  => count($results),
-        'records' => $results
-    ];
+        $db = \Config\Database::connect();
+        $builder = $db->table('contact_form_submissions');
+        $query = $builder->orderBy('id', 'DESC')->get();
+        $results = $query->getResultArray();
 
-    return view('enquiry', $data);
-}
+        $data = [
+            'status' => true,
+            'count'  => count($results),
+            'records' => $results
+        ];
+
+        return view('enquiry', $data);
+    }
+
 
     public function contact_form()
     {
@@ -114,10 +119,69 @@ class Home extends BaseController
 
     public function getallcontactsubmissions()
     {
+        if (!session()->has('user_id')) {
+            return redirect()->to('login');
+        }
+
         $db = \Config\Database::connect();
         $builder = $db->table('contact_form_submissions');
         $query = $builder->get();
         $results = $query->getResultArray();
+
         return $this->response->setJSON($results);
+    }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('login');
+    }
+
+
+    public function register()
+    {
+        return view('register');
+    }
+
+    public function storeUser()
+    {
+        $userModel = new \App\Models\UserModel();
+
+        $data = [
+            'first_name' => $this->request->getPost('first_name'),
+            'last_name'  => $this->request->getPost('last_name'),
+            'mobile_no'  => $this->request->getPost('mobile_no'),
+            'email'      => $this->request->getPost('email'),
+            'password'   => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+        ];
+
+        $userModel->save($data);
+
+        return redirect()->to('login')->with('success', 'Registration successful! Please login.');
+    }
+
+
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function loginCheck()
+    {
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+
+        $userModel = new \App\Models\UserModel();
+        $user = $userModel->where('email', $email)->first();
+
+        if ($user && password_verify($password, $user['password'])) {
+            // Login OK
+            session()->set('user_id', $user['id']);
+            session()->set('user_name', $user['first_name']);
+
+            return redirect()->to('enquiry');
+        }
+
+        return redirect()->back()->with('error', 'Invalid email or password');
     }
 }
