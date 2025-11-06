@@ -19,6 +19,7 @@
                                         <th>Service</th>
                                         <th>Message</th>
                                         <th>Created At</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -32,6 +33,7 @@
                                                 <td><?= esc($row['services']); ?></td>
                                                 <td><?= esc($row['message']); ?></td>
                                                 <td><?= date('d M Y h:i A', strtotime($row['created_at'])); ?></td>
+                                                <td></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     <?php else : ?>
@@ -42,8 +44,6 @@
                                 </tbody>
                             </table>
                         </div>
-
-                        <a href="<?= base_url('logout'); ?>" class="btn btn-danger">Logout</a>
 
                     </div>
                 </div>

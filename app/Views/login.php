@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="public/assets/css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="public/assets/images/favicon.ico" />
+  <style>
+    .brand-logo h2{color: #844fc1; font-weight: bold;}
+  </style>
 </head>
 
 <body>
@@ -26,7 +29,8 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-start py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <img src="public/assets/images/logo-dark.svg" alt="logo">
+                <img src="public/assets/images/logo-dark.svg" alt="logo" style="display: none;">
+                <h2>Aarya Mobile Services</h2>
               </div>
               <h4>Hello! let's get started</h4>
               <h6 class="fw-light">Sign in to continue.</h6>
