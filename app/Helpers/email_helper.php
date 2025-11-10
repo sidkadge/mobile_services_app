@@ -22,13 +22,21 @@ function sendConfirmationEmail(
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'siddheshkadgemitech@gmail.com';   
-        $mail->Password   = 'byfb lzcj dvuc kxln'; 
+        $mail->Username   = 'siddheshkadgemitech@gmail.com';
+        $mail->Password   = 'byfb lzcj dvuc kxln';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
+        $mail->isHTML(true);
 
-        $mail->setFrom('siddheshkadgemitech@gmail.com', 'Aarya Mobile Services'); 
-        $mail->addAddress($email, $name);
+        /* ------------------------------------------------------
+            1. SEND MAIL TO YOU + CC TEAM (Receiver mail)
+        ------------------------------------------------------ */
+        $mail->setFrom('siddheshkadgemitech@gmail.com', 'Aarya Mobile Services');
+
+        // Main receiver (your admin email)
+        $mail->addAddress('siddheshkadge214@gmail.com', 'Admin');
+
+        // CC team
         if ($ccEmails) {
             foreach ($ccEmails as $cc) {
                 if (filter_var($cc, FILTER_VALIDATE_EMAIL)) {
@@ -37,22 +45,28 @@ function sendConfirmationEmail(
             }
         }
 
-        // Send receiver mail
-        $mail->isHTML(true);
         $mail->Subject = $receiverSubject;
         $mail->Body    = $receiverMsg;
         $mail->send();
 
-        // Clear addresses for sender email
+
+        /* ------------------------------------------------------
+            2. SEND THANK YOU EMAIL TO CUSTOMER (Sender mail)
+        ------------------------------------------------------ */
         $mail->clearAddresses();
+        $mail->clearCCs();
+
+        // Customer email
         $mail->addAddress($email, $name);
+
         $mail->Subject = $senderSubject;
         $mail->Body    = $senderMsg;
         $mail->send();
 
         return true;
+
     } catch (Exception $e) {
-        log_message('error', "Email could not be sent. PHPMailer Error: {$mail->ErrorInfo}");
-        return false;
-    }       
+        log_message('error', "Email error: {$mail->ErrorInfo}");
+        return $mail->ErrorInfo;
+    }
 }
