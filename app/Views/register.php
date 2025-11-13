@@ -12,7 +12,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="<?= base_url('public/assets/css/style.css'); ?>">
   <!-- endinject -->
-  <link rel="shortcut icon" href="<?= base_url('public/assets/images/favicon.ico'); ?>" />
+  <link rel="shortcut icon" href="public/uploads/images/webicon.png" />
     <style>
     .brand-logo h2{color: #844fc1; font-weight: bold;}
   </style>
