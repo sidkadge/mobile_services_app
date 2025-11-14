@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arya Mobile Repairing Services</title>
 
+  <link rel="shortcut icon" href="public/uploads/images/webicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -51,7 +54,11 @@
   to { transform: rotate(360deg); }
 }
 .mylogo{height: 95px;}
-.mynav{padding: 5px 20px !important;}
+.mynav{padding: 5px 20px !important; background: #f7f6f7;}
+.callbutton{bottom: 7rem;}
+#debug-icon {display: none;}
+
+.space-y-4 .fa{font-size: 20px;}
 </style>
 
 </head>
@@ -175,17 +182,26 @@
           </div>
 
           <!-- iPads -->
+          <!-- iPads -->
           <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
             <button class="ams-accordion__trigger w-full flex justify-between items-center p-6 text-lg font-bold text-purple-700 hover:bg-purple-50 transition">
-              <span>iPads</span>
+              <span>Tabs</span>
               <svg class="ams-accordion__icon w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </button>
             <div class="ams-accordion__content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 p-6 hidden opacity-0 transition-opacity duration-200 ease-out">
               <div class="device-card bg-white rounded-xl shadow hover:shadow-2xl transition cursor-pointer p-6 text-center" data-device="iPad">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-14 h-14 mx-auto mb-4" alt="iPad"/>
-                <h3 class="text-lg font-bold text-gray-800">iPad (All)</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="w-14 h-14 mx-auto mb-4" alt="Aryamobile phone repair shop in Kharadi, Pune"/>
+                <h3 class="text-lg font-bold text-gray-800">iPad</h3>
+              </div>
+              <div class="device-card bg-white rounded-xl shadow hover:shadow-2xl transition cursor-pointer p-6 text-center" data-device="Samsung tab">
+                <img src="public/uploads/images/samsung_logo.png" class="w-14 h-14 mx-auto mb-4" alt="Aryamobile phone repair shop in Kharadi, Pune"/>
+                <h3 class="text-lg font-bold text-gray-800">Samsung</h3>
+              </div>
+              <div class="device-card bg-white rounded-xl shadow hover:shadow-2xl transition cursor-pointer p-6 text-center" data-device="iBall tab">
+                <img src="public/uploads/images/iBall_logo.png" class="w-14 h-14 mx-auto mb-4" alt="Aryamobile phone repair shop in Kharadi, Pune"/>
+                <h3 class="text-lg font-bold text-gray-800">iBall</h3>
               </div>
             </div>
           </div>
@@ -360,11 +376,10 @@
             </div>
             <div class="allText bottomText" data-aos="fade-left">
                 <p class="text-blk subHeadingText">
-                    Aarya Mobiles Repairing Services
+                    Arya Mobiles Repairing Services
                 </p>
                 <p class="text-blk description">
-                    At **Arya Mobile Repairing Services**, we are passionate about bringing your devices back to life. With years of experience and a team of certified technicians, we provide top-notch repair services for all major mobile brands, including Apple, Samsung, Google, and more.
-                    <br><br>We believe in transparency, quality, and speed. Our goal is to make the repair process as smooth and stress-free as possible, offering competitive pricing and a satisfaction guarantee on all our work.
+                    Welcome to Aryamobile Services, your local mobile experts for the Kharadi, Wagholi, and Chandannagar area in Pune. Since launching our new website, booking a reliable service has never been easier! We specialize in lightning-fast iPhone screen replacement, genuine Samsung battery change, and all types of Android phone repair. For new purchases, check out our latest mobile phone deals and exclusive mobile accessories selection. Our technicians are certified to handle complex motherboard repair and software issues. Don't waste time traveling far—get guaranteed, high-quality service right here in your neighborhood. Book your repair online or visit our Kharadi shop today!
                 </p>
                 <div class="button-group">
                     <a class="explore" href="#device-selection-section">
@@ -388,31 +403,25 @@
         <div class="contactusbox" data-aos="zoom-in">
           <div class="flex flex-col lg:flex-row gap-12">
             <div class="lg:w-1/2">
-                <h4 style="font-size: 28px; font-weight: bold; text-shadow: 1px 1px 3px #8080807d; color: cadetblue;">Aarya Mobile Solutions</h4>
+                <h4 style="font-size: 28px; font-weight: bold; text-shadow: 1px 1px 3px #8080807d; color: cadetblue;">Arya Mobile Solutions</h4>
               <p class="text-lg text-gray-700 mb-6" style="font-style: italic;">
                 Ready to get your device repaired? Fill out the form above or contact us directly. We'll get back to you as soon as possible with a free quote.
               </p>
               <div class="space-y-4">
                 <div class="flex items-center space-x-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span class="text-gray-700">Shivtirth Nagar, Kothrud - 411 011</span>
+                  <i class="fa fa-map-marker-alt"></i>
+                  <span class="text-gray-700">Shop No 25, Phone zone plus, Chandan shopping center bhaji market, Chandannagar Pune - 411014</span>
                 </div>
                 <div class="flex items-center space-x-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.956.71l1.19 3.96a1 1 0 00.51.51l3.96 1.19a1 1 0 00.71.956H17a1 1 0 011 1v2.153a1 1 0 01-.71.956l-3.96 1.19a1 1 0 00-.51.51l-1.19 3.96a1 1 0 01-.956.71H3a1 1 0 01-1-1v-2.153a1 1 0 01.71-.956l3.96-1.19a1 1 0 00.51-.51l1.19-3.96a1 1 0 00.956-.71H17a1 1 0 011 1v2.153a1 1 0 01-.71.956L14.72 13.91a1 1 0 00-.51.51l-1.19 3.96a1 1 0 01-.956.71H3a1 1 0 01-1-1V5.153a1 1 0 01.71-.956z"></path>
-                  </svg>
+                  <i class="fa fa-phone"></i>
                   <a href="tel:+919876543210" class="text-gray-700 hover:text-indigo-600 transition-colors">+91 98765 43210</a>
                 </div>
                 <div class="flex items-center space-x-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 11.239l7.997-5.355A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                    <path d="M18 8.118l-8 4.717-8-4.717V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                  </svg>
+                  <i class="fa fa-envelope"></i>
                   <a href="mailto:contact@aryarepair.com" class="text-gray-700 hover:text-indigo-600 transition-colors">contact@aryarepair.com</a>
                 </div>
               </div>
+
             </div>
 
             <div class="lg:w-1/2">
@@ -428,7 +437,7 @@
     </section>
 
     <!-- Floating Call Button -->
-    <div class="fixed bottom-5 right-5 z-50">
+    <div class="callbutton fixed right-5 z-50">
       <a href="tel:+919876543210" class="bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 focus:outline-none focus:ring-4 focus:ring-green-300">
         Call us
       </a>
@@ -477,16 +486,52 @@
     // Your exact deviceData
     const deviceData = {
       'Apple iPhone': [
-        'iPhone 15 Pro Max','iPhone 15 Pro','iPhone 15',
-        'iPhone 14 Pro Max','iPhone 14 Pro','iPhone 14',
-        'iPhone 13 Pro Max','iPhone 13 Pro','iPhone 13',
-        'iPhone 12 Pro Max','iPhone 12','iPhone 11',
-        'iPhone SE (2022)','iPhone XR','other'
+        'iPhone 17 Pro Max' , 'iPhone 17 Pro' , 'iPhone 17 Air' , 'iPhone 17' ,
+        'iPhone 16e' , 'iPhone 16 Pro Max' , 'iPhone 16 Pro' , 'iPhone 16 Plus' , 'iPhone 16' ,
+        'iPhone 15 Pro Max','iPhone 15 Pro','iPhone 15', 'iPhone 15 Plus',
+        'iPhone 14 Pro Max','iPhone 14 Pro','iPhone 14', 'iPhone 14 Plus' , 'iPhone SE (3rd Gen)' ,
+        'iPhone 13 Pro Max','iPhone 13 Pro','iPhone 13', 'iPhone 13 mini' ,
+        'iPhone 12 Pro Max','iPhone 12 Pro','iPhone 12 mini', 'iPhone 12' , 'iPhone SE (2nd Gen)' ,
+        'iPhone 11 Pro Max' , 'iPhone 11 Pro' , 'iPhone 11' ,
+        'iPhone SE (2022)','iPhone XR','iPhone XS Max' , 
+        'iPhone XS' , 'iPhone X' , 'iPhone 8 Plus' , 
+        'iPhone 8' , 'iPhone SE (1st Gen)' ,
+        'iPhone 7 Plus' , 'iPhone 7' , 'iPhone 6s Plus', 
+        'iPhone 6s' , 'iPhone 6 Plus' , 'iPhone 6' , 
+        'iPhone 5c' , 'iPhone 5s' , 'iPhone 5' , 
+        'iPhone 4s' , 'iPhone 4' , 'iPhone 4s' , 
+        'iPhone 3GS' , 'iPhone 3G'
+
       ],
       'iPad': [
         'iPad Pro (M4)','iPad Pro (M2)','iPad Air (M2)',
         'iPad Air (5th Gen)','iPad (10th Gen)',
-        'iPad (9th Gen)','iPad mini (6th Gen)','iPad mini (5th Gen)','other'
+        'iPad (9th Gen)','iPad mini (6th Gen)','iPad mini (5th Gen)'
+      ],
+      'Samsung tab': [
+        'Samsung Galaxy Tab S11 Ultra', 'Samsung Galaxy Tab S11+', 'Samsung Galaxy Tab S11', 'Samsung Galaxy Tab S10 Ultra',
+        'Samsung Galaxy Tab S10+', 'Samsung Galaxy Tab S10', 'Samsung Galaxy Tab S9 Ultra', 'Samsung Galaxy Tab S9 FE+',
+        'Samsung Galaxy Tab S9+', 'Samsung Galaxy Tab S9 FE', 'Samsung Galaxy Tab S9', 'Samsung Galaxy Tab S8 Ultra',
+        'Samsung Galaxy Tab S8+', 'Samsung Galaxy Tab S8', 'Samsung Galaxy Tab A9+', 'Samsung Galaxy Tab A9',
+        'Samsung Galaxy Tab A8 (2021)', 'Samsung Galaxy Tab A7 Lite', 'Samsung Galaxy Tab S6 Lite (2024)', 'Samsung Galaxy Tab Active5 Pro'
+      ],
+      'iBall tab': [
+        'iBall iTAB BizniZ Mini', 'iBall iTAB BizniZ', 'iBall Slide Brisk 4G2', 'iBall Slide Wings', 'iBall Slide Elan 3x32', 'iBall Slide Elan 4G2',
+        'iBall Slide Elan 2x32', 'iBall Slide Gorgeo 4GL', 'iBall Slide Q27 4G', 'iBall Slide Snap 4G2', 'iBall Slide Dazzle i7', 'iBall Slide Skye 03',
+        'iBall Slide Spirit X2', 'iBall Slide Wondro 10', 'iBall Slide Nimble 4GF', 'iBall Slide Enzo V8', 'iBall Slide Imprint 4G', 'iBall Slide Cuddle A4',
+        'iBall Slide i701', 'iBall Slide Brace XJ', 'iBall Slide Brace X1 Mini', 'iBall Slide Brillante', 'iBall Slide Stellar A2', 'iBall Slide Octa A41',
+        'iBall Slide O900-C', 'iBall Slide Q45i', 'iBall Slide Q45 3G', 'iBall Slide Q40i', 'iBall Slide Q27', 'iBall Slide 6351-Q400i', 'iBall Slide D7061',
+        'iBall Slide 3G Q81', 'iBall Slide 3G Q45', 'iBall Slide 3G 6095Q700', 'iBall Slide 3G 7803Q-900', 'iBall Slide 3G 1026-Q18', 'iBall Slide 3G Q7218',
+        'iBall Slide 3G 9017-D50', 'iBall Slide 3G 9728', 'iBall Slide 3G 7271-HD70', 'iBall Slide 3G 6095-D20', 'iBall Slide 3G 7803Q-900',
+        'iBall Slide 3G 7334i', 'iBall Slide 3G 7334Q-10', 'iBall Slide 3G 7334Q-50', 'iBall Slide 3G 1026-Q18', 'iBall Slide 3G 7334i', 'iBall Slide Tablet PC 6318i',
+        'iBall Slide i6516', 'iBall Slide 3G 7307', 'iBall Slide 3G 7236', 'iBall Slide 3G 7271', 'iBall Slide 3G 7271-2G', 'iBall Slide 3G 7334Q',
+        'iBall Slide 3G 7271 HD7', 'iBall Slide 3G 7803Q', 'iBall Slide Q45i', 'iBall Slide Cuddle i4', 'iBall Slide Spirit V2', 'iBall Slide Spirit X1',
+        'iBall Slide 3G Q81', 'iBall Slide 3G Q45', 'iBall Slide 3G Q45i', 'iBall Slide 3G 1017', 'iBall Slide i6012', 'iBall Slide i6013', 'iBall Slide i9702',
+        'iBall Slide i701', 'iBall Slide i6516', 'iBall Slide i7218', 'iBall Slide i6519', 'iBall Slide i6095', 'iBall Slide Elan 4G2', 'iBall Slide Elan 3x32',
+        'iBall Slide Elan 2x32', 'iBall Slide Wings 4G', 'iBall Slide Wings', 'iBall Slide Wings i101', 'iBall Slide Skye 03', 'iBall Slide Dazzle i7',
+        'iBall Slide Snap 4G2', 'iBall Slide Nimble 4GF', 'iBall Slide Imprint 4G', 'iBall Slide Spirit V2', 'iBall Slide Spirit X2', 'iBall Slide Brace XJ',
+        'iBall Slide Brace X1 Mini', 'iBall Slide Brace X1', 'iBall Slide Stellar A2', 'iBall Slide Stellar A1', 'iBall Slide Gorgeo 4GL', 'iBall Slide O900-C',
+        'iBall Slide Brillante', 'iBall Slide Enzo V8', 'iBall Slide Twinkle i5', 'iBall Slide i9702', 'iBall Slide Q27 4G', 'iBall Slide Dazzle i7',
       ],
       'Apple Watch': [
         'Apple Watch Ultra 2','Apple Watch Ultra',
@@ -494,75 +539,133 @@
         'Apple Watch SE (2nd Gen)','Apple Watch SE','other'
       ],
       'Samsung': [
-        'Galaxy S24 Ultra','Galaxy S24+','Galaxy S24',
-        'Galaxy S23 Ultra','Galaxy S23','Galaxy Z Fold5',
-        'Galaxy Z Flip5','Galaxy Z Fold4','Galaxy Z Flip4',
-        'Galaxy A55','Galaxy A35','Galaxy Tab S9 Ultra',
-        'Galaxy Tab S9+','Galaxy Tab S9','Galaxy Tab A9+','other'
+        'Galaxy S25 Ultra', 'Galaxy S25 Plus', 'Galaxy S25', 
+        'Galaxy S24 Ultra', 'Galaxy S24 Plus', 'Galaxy S24', 'Galaxy S24 FE', 
+        'Galaxy S23 Ultra', 'Galaxy S23 Plus', 'Galaxy S23', 'Galaxy S23 FE',
+        'Galaxy S22 Ultra', 'Galaxy S22 Plus', 'Galaxy S22',
+        'Galaxy S21 Ultra', 'Galaxy S21 Plus', 'Galaxy S21', 'Galaxy S21 FE',
+        'Galaxy S20 Ultra', 'Galaxy S20 Plus', 'Galaxy S20', 'Galaxy S20 FE',
+        'Galaxy S10 Plus', 'Galaxy S10', 'Galaxy Z Fold7', 'Galaxy Z Flip7',
+        'Galaxy Z Fold6', 'Galaxy Z Flip6', 'Galaxy Z Fold5', 'Galaxy Z Flip5',
+        'Galaxy A56 5G', 'Galaxy A36 5G', 'Galaxy A55 5G', 'Galaxy A35 5G', 
+        'Galaxy A17 5G', 'Galaxy A16 5G', 'Galaxy A06 5G', 'Galaxy A54 5G', 
+        'Galaxy A34 5G', 'Galaxy A15 5G', 'Galaxy A14 5G', 'Galaxy M56 5G',
+        'Galaxy M36 5G', 'Galaxy M17 5G', 'Galaxy M55 5G', 'Galaxy M35 5G',
+        'Galaxy M15 5G', 'Galaxy M14 5G', 'Galaxy M06 5G', 'Galaxy F56 5G',
+        'Galaxy F36 5G', 'Galaxy F16 5G', 'Galaxy M53 5G', 'Galaxy M52 5G',
+        'Galaxy M33 5G', 'Galaxy M32', 'Galaxy M13', 'Galaxy M04', 
+        'Galaxy A73 5G', 'Galaxy A52s 5G', 'Galaxy A33 5G', 'Galaxy A22 5G', 
+        'Galaxy A51', 'Galaxy A71', 'Galaxy Note 20 Ultra', 'Galaxy Note 10 Plus'
       ],
       'OnePlus': [
-        'OnePlus 12','OnePlus 12R','OnePlus 11',
-        'OnePlus 10 Pro','OnePlus 10T',
-        'OnePlus Nord 3','OnePlus Nord CE 3',
-        'OnePlus Nord CE 3 Lite','other'
+        'OnePlus 13 Pro', 'OnePlus 13R', 'OnePlus 13', 'OnePlus 12',
+        'OnePlus 12R', 'OnePlus 11R', 'OnePlus 11', 'OnePlus 10 Pro',
+        'OnePlus 9 Pro', 'OnePlus 9RT', 'OnePlus 9R', 'OnePlus 8T',
+        'OnePlus 7 Pro', 'OnePlus 7T', 'OnePlus 7', 'OnePlus 6T',
+        'OnePlus Nord 5', 'OnePlus Nord 4', 'OnePlus Nord 3 5G', 'OnePlus Nord 2T 5G',
+        'OnePlus Nord CE5 5G', 'OnePlus Nord CE4 5G', 'OnePlus Nord CE3 Lite 5G', 'OnePlus Nord CE 5G'
       ],
       'Google Pixel': [
-        'Pixel 8 Pro','Pixel 8','Pixel 7a',
-        'Pixel 7 Pro','Pixel 7','Pixel 6a',
-        'Pixel Fold','Pixel Tablet','other'
+        'Google Pixel 10 Pro Fold', 'Google Pixel 10 Pro XL', 'Google Pixel 10 Pro', 'Google Pixel 10',
+        'Google Pixel 9 Pro Fold', 'Google Pixel 9 Pro XL', 'Google Pixel 9 Pro', 'Google Pixel 9',
+        'Google Pixel 8 Pro', 'Google Pixel 8', 'Google Pixel 8a', 'Google Pixel 7 Pro',
+        'Google Pixel 7', 'Google Pixel 7a', 'Google Pixel 6 Pro', 'Google Pixel 6',
+        'Google Pixel 6a', 'Google Pixel Fold', 'Google Pixel 5', 'Google Pixel 4a',
+        'Google Pixel 3a XL', 'Google Pixel 3a', 'Google Pixel XL'
       ],
       'Oppo': [
-        'Oppo Reno 11 Pro','Oppo Reno 10 Pro+',
-        'Oppo Find X7 Ultra','Oppo Find X6 Pro',
-        'Oppo Find N3 Flip','Oppo Find N2 Flip','other'
+        'OPPO Reno13 Pro', 'OPPO Reno13 Lite', 'OPPO Reno13', 'OPPO Reno12 Pro',
+        'OPPO Reno12 F', 'OPPO Reno12 Lite', 'OPPO Reno11 Pro 5G', 'OPPO Reno11 5G',
+        'OPPO Reno10 Pro+', 'OPPO Reno10 5G', 'OPPO Reno9 Pro', 'OPPO Reno8 T',
+        'OPPO Find X7 Ultra', 'OPPO Find N3 Flip', 'OPPO Find N3', 'OPPO Find X6 Pro',
+        'OPPO F25 Pro 5G', 'OPPO F23 5G', 'OPPO F21 Pro', 'OPPO F19 Pro',
+        'OPPO A98 5G', 'OPPO A79 5G', 'OPPO A59 5G', 'OPPO A18',
+        'OPPO K12x', 'OPPO K11x', 'OPPO K10 5G', 'OPPO A78 5G',
+        'OPPO A57', 'OPPO A38', 'OPPO A77', 'OPPO A55'
       ],
       'Vivo': [
-        'Vivo X100 Pro','Vivo X100',
-        'Vivo V30 Pro','Vivo V29 Pro','Vivo V29',
-        'Vivo Y200e','Vivo Y100','Vivo T3x','other'
+        'VIVO X Fold 5', 'VIVO X200 Pro', 'VIVO X200', 'VIVO X100 Pro',
+        'VIVO X90 Pro', 'VIVO X80 Pro', 'VIVO V60 Pro', 'VIVO V60e',
+        'VIVO V50 Pro', 'VIVO V50', 'VIVO V40 Pro', 'VIVO V40',
+        'VIVO V30 Pro 5G', 'VIVO V30 5G', 'VIVO V30e 5G', 'VIVO V29 Pro',
+        'VIVO V29 5G', 'VIVO V27 Pro', 'VIVO V27 5G', 'VIVO V25 Pro',
+        'VIVO V23 5G', 'VIVO V21 5G', 'VIVO T4 Pro 5G', 'VIVO T3 5G',
+        'VIVO Y200 Pro 5G', 'VIVO Y200 5G', 'VIVO Y100 5G', 'VIVO Y58 5G',
+        'VIVO Y36', 'VIVO Y28 5G', 'VIVO Y17s', 'VIVO Y27'
       ],
       'Realme': [
-        'Realme 12 Pro+','Realme 12 Pro',
-        'Realme GT 5 Pro','Realme GT 3',
-        'Realme 11 Pro+','Realme 11x',
-        'Realme Narzo 70 Pro','Realme C67','other'
+        'Realme GT 6 Pro 5G', 'Realme GT 6 5G', 'Realme GT Neo 6', 'Realme GT Neo 5',
+        'Realme 13 Pro 5G', 'Realme 13 5G', 'Realme 12 Pro+ 5G', 'Realme 12 Pro 5G',
+        'Realme 12+ 5G', 'Realme 12 5G', 'Realme 11 Pro+ 5G', 'Realme 11 Pro 5G',
+        'Realme 11 5G', 'Realme 10 Pro+ 5G', 'Realme 10 Pro 5G', 'Realme 10',
+        'Realme Narzo 70 Pro 5G', 'Realme Narzo 70 5G', 'Realme Narzo 60 Pro 5G', 'Realme Narzo 60 5G',
+        'Realme C67 5G', 'Realme C65 5G', 'Realme C55', 'Realme C53'
       ],
       'Mi (Redmi)': [
-        'Xiaomi 14 Ultra','Xiaomi 14',
-        'Redmi Note 13 Pro+','Redmi Note 13 Pro',
-        'Redmi Note 13 5G','Redmi Note 12 Pro+',
-        'Redmi 13C','POCO F6 Pro','POCO X6 Pro','other'
+        'Xiaomi 14 Ultra', 'Xiaomi 14 Pro', 'Xiaomi 14 Civi', 'Xiaomi 13 Pro',
+        'Xiaomi 13 Ultra', 'Xiaomi 12 Pro', 'Xiaomi 12 Lite', 'Xiaomi 11 Ultra',
+        'Redmi Note 14 Pro+ 5G', 'Redmi Note 14 Pro 5G', 'Redmi Note 14 5G', 'Redmi Note 13 Pro+ 5G',
+        'Redmi Note 13 Pro 5G', 'Redmi Note 13 5G', 'Redmi Note 12 Pro+ 5G', 'Redmi Note 12 Pro 5G',
+        'Redmi Note 12 5G', 'Redmi Note 11 Pro+', 'Redmi Note 11S', 'Redmi Note 10 Pro Max',
+        'Redmi 15 5G', 'Redmi 14C 5G', 'Redmi 13C 5G', 'Redmi 12 5G',
+        'Redmi K70 Pro', 'Redmi K60 Ultra', 'Redmi A5', 'Redmi A4'
       ],
       'iQOO': [
-        'iQOO 12','iQOO 12 Pro','iQOO Neo 9 Pro',
-        'iQOO Z9','iQOO Z7 Pro','iQOO 11','other'
+        'iQOO 13 Pro', 'iQOO 13', 'iQOO 12 Pro', 'iQOO 12',
+        'iQOO 11 Pro', 'iQOO 11', 'iQOO 10 Pro', 'iQOO 10',
+        'iQOO Z9x 5G', 'iQOO Z9 5G', 'iQOO Z8 5G', 'iQOO Z7 Pro 5G',
+        'iQOO Z7 5G', 'iQOO Z6 Pro 5G', 'iQOO Neo9 Pro', 'iQOO Neo9',
+        'iQOO Neo8 Pro', 'iQOO Neo8', 'iQOO Neo7 Pro 5G', 'iQOO Neo7 5G'
       ],
       'Asus ROG': [
-        'ROG Phone 8 Pro','ROG Phone 8',
-        'ROG Phone 7 Ultimate','ROG Phone 7','other'
+        'Asus ROG Phone 10 Pro', 'Asus ROG Phone 10', 'Asus ROG Phone 9 Pro', 'Asus ROG Phone 9',
+        'Asus ROG Phone 8 Pro', 'Asus ROG Phone 8', 'Asus ROG Phone 7 Ultimate', 'Asus ROG Phone 7',
+        'Asus ROG Phone 6D Ultimate', 'Asus ROG Phone 6 Pro', 'Asus ROG Phone 6', 'Asus ROG Phone 5s Pro',
+        'Asus ROG Phone 5s', 'Asus ROG Phone 5 Ultimate', 'Asus ROG Phone 5', 'Asus ROG Phone 3',
+        'Asus ROG Phone 2', 'Asus ROG Phone'
       ],
       'Nokia': [
-        'Nokia G42 5G','Nokia X30 5G',
-        'Nokia G60 5G','Nokia C32','Nokia C22','other'
+        'Nokia X30 5G', 'Nokia G60 5G', 'Nokia G42 5G', 'Nokia G310',
+        'Nokia C32', 'Nokia C22', 'Nokia C21 Plus', 'Nokia C300',
+        'Nokia C12 Pro', 'Nokia G22', 'Nokia G21', 'Nokia G20',
+        'Nokia G11 Plus', 'Nokia XR21', 'Nokia XR20', 'Nokia 7610 5G',
+        'Nokia X100', 'Nokia 8.3 5G', 'Nokia 5.4', 'Nokia 3.4',
+        'Nokia 2660 Flip', 'Nokia 8210 4G', 'Nokia 6310', 'Nokia 5710 XA',
+        'Nokia 3210', 'Nokia 150', 'Nokia 110', 'Nokia 105'
       ],
       'Motorola': [
-        'Moto Edge 50 Ultra','Moto Edge 50 Pro',
-        'Moto Edge 40','Moto Edge 40 Neo',
-        'Moto Razr 40 Ultra','Moto Razr 40',
-        'Moto G73','Moto G54','other'
+        'Motorola Edge 50 Ultra', 'Motorola Edge 50 Pro', 'Motorola Edge 50 Fusion', 'Motorola Edge 40 Ultra',
+        'Motorola Edge 40 Pro', 'Motorola Edge 40', 'Motorola Edge 30 Ultra', 'Motorola Edge 30 Pro',
+        'Motorola Edge+ (2023)', 'Motorola Razr 40 Ultra', 'Motorola Razr 40', 'Motorola Razr 2023',
+        'Motorola Moto G85 5G', 'Motorola Moto G55 5G', 'Motorola Moto G35 5G', 'Motorola Moto G25 5G',
+        'Motorola Moto G Play (2024)', 'Motorola Moto G Power 5G (2024)', 'Motorola Moto G Stylus 5G (2024)', 'Motorola Moto G Stylus (2023)'
       ],
       'Honor': [
-        'Honor 200 Pro','Honor 90','Honor 100',
-        'Honor X9b','Honor Magic V2','Honor Magic 6 Pro','other'
+        'Honor Magic V5', 'Honor Magic 8 Pro', 'Honor Magic 7 Pro', 'Honor Magic 6 Pro',
+        'Honor Magic Vs', 'Honor Magic V2', 'Honor 400 Pro', 'Honor 400',
+        'Honor 200 Pro', 'Honor 200', 'Honor 90', 'Honor 70',
+        'Honor X9c', 'Honor X9b', 'Honor X7c 5G', 'Honor X6c',
+        'Honor X5 Plus', 'Honor X8b', 'Honor X7b', 'Honor X9a'
       ],
       'Lenovo': [
-        'Lenovo Tab P12 Pro','Lenovo Tab P11 (2nd Gen)',
-        'Lenovo Tab M10','Lenovo Tab M11',
-        'Lenovo Legion Y700 (2023)','other'
+        'Lenovo Legion Phone Duel 2', 'Lenovo Legion Phone Duel', 'Lenovo Legion 2 Pro', 'Lenovo Legion Y90',
+        'Lenovo Legion Y70', 'Lenovo ThinkPhone', 'Lenovo Z6 Pro 5G', 'Lenovo Z6 Pro',
+        'Lenovo Z6 Youth Edition', 'Lenovo K14 Plus', 'Lenovo K13 Note', 'Lenovo K10 Note',
+        'Lenovo K10 Plus', 'Lenovo K9', 'Lenovo K8 Note', 'Lenovo K8 Plus',
+        'Lenovo K6 Note', 'Lenovo K6 Power', 'Lenovo K5 Note (2018)', 'Lenovo Vibe K5 Plus'
       ],
-      'Nothing': ['Nothing Phone (2a)','Nothing Phone (2)','Nothing Phone (1)','other'],
-      'Sony': ['Sony Xperia 1 VI','Sony Xperia 5 V','Sony Xperia 10 VI','Sony Xperia PRO-I','other']
+      'Nothing': [
+        'Nothing Phone (3) Pro', 'Nothing Phone (3)', 'Nothing Phone (2) Pro', 'Nothing Phone (2) A',
+        'Nothing Phone (2)', 'Nothing Phone (1) Pro', 'Nothing Phone (1)', 'Nothing CMF Phone 1'
+    ],
+      'Sony': [
+        'Sony Xperia 1 VII', 'Sony Xperia 1 VI', 'Sony Xperia 1 V', 'Sony Xperia 1 IV',
+        'Sony Xperia 5 V', 'Sony Xperia 5 IV', 'Sony Xperia 5 III', 'Sony Xperia 5 II',
+        'Sony Xperia 10 VII', 'Sony Xperia 10 VI', 'Sony Xperia 10 V', 'Sony Xperia 10 IV',
+        'Sony Xperia Pro-I II', 'Sony Xperia Pro-I', 'Sony Xperia XZ3', 'Sony Xperia XZ2',
+        'Sony Xperia XA2 Ultra', 'Sony Xperia XA2', 'Sony Xperia L4', 'Sony Xperia L3']
     };
+
 
     // Service list for cards (multi-select)
     const SERVICE_ITEMS = [

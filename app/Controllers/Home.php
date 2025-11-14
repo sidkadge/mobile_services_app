@@ -52,7 +52,7 @@ class Home extends BaseController
     if (empty($input)) {
         $input = $this->request->getPost();
     }
-// print_r($input); exit;
+    // print_r($input); exit;
     if (!isset($input['full_name'], $input['email'], $input['mobile_number'])) {
         return $this->response->setJSON([
             'status' => false,
@@ -70,8 +70,8 @@ class Home extends BaseController
         ? (is_array($input['services']) ? implode(', ', $input['services']) : $input['services'])
         : 'Not specified';
 
-    $mobile_model   = $input['mobile_model']   ?? 'Not specified';
-    $mobile_company = $input['mobile_company'] ?? 'Not specified';
+    $mobile_model   = $input['model']   ?? 'Not specified';
+    $mobile_company = $input['company'] ?? 'Not specified';
 
     $db = \Config\Database::connect();
     $builder = $db->table('contact_form_submissions');
@@ -97,8 +97,10 @@ class Home extends BaseController
         <h2>Contact Form Submission Details</h2>
         <p><strong>Name:</strong> {$name}</p>
         <p><strong>Email:</strong> {$email}</p>
-        <p><strong>Phone:</strong> {$phone}</p>
+        <p><strong>Contact No:</strong> {$phone}</p>
         <p><strong>Subject:</strong> {$subject}</p>
+        <p><strong>Company Name:</strong> {$mobile_company}</p>
+        <p><strong>Model Name:</strong> {$mobile_model}</p>
         <p><strong>Message:</strong> {$message}</p>
     ";
 
